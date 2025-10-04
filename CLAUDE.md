@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Jumpstart Pro Rails is a commercial multi-tenant SaaS starter application built with Rails 8.0. It provides subscription billing, team management, authentication, and modern Rails patterns for building subscription-based web applications.
+Jumpstart Pro Rails is a commercial multi-tenant SaaS starter application built with Rails 8. It provides subscription billing, team management, authentication, and modern Rails patterns for building subscription-based web applications.
 
 ## Development Commands
 
@@ -67,11 +67,13 @@ end
 - **Processor-agnostic**: Stripe, Paddle, Braintree, PayPal, Lemon Squeezy support
 - **Per-seat billing**: Team accounts with usage-based pricing
 - **Subscription management**: In `app/models/account/billing.rb`
+- **Email delivery**: Mailgun, Mailpace, Postmark, and Resend use API gems instead of SMTP
+- **API client errors**: Raise `UnprocessableContent` for 422 responses (rfc9110)
 
 ## Technology Stack
 
-- **Rails 8.0** with Hotwire (Turbo + Stimulus)
-- **PostgreSQL** (primary), **SolidQueue** (jobs), **SolidCache** (cache)
+- **Rails 8** with Hotwire (Turbo + Stimulus) and Hotwire Native
+- **PostgreSQL** (primary), **SolidQueue** (jobs), **SolidCache** (cache), **SolidCable** (websockets)
 - **Import Maps** for JavaScript (no Node.js dependency)
 - **TailwindCSS v4** via tailwindcss-rails gem
 - **Devise** for authentication with custom extensions
