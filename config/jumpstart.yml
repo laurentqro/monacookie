@@ -1,0 +1,18 @@
+---
+application_name: Monacookie
+business_name: Monaco RGPD
+business_address: 
+domain: monacookie.com
+support_email: support@monacookie.com
+default_from_email: Monacookie <no-reply@monacookie.com>
+background_job_processor: 
+email_provider: 
+account_types: both
+apns: false
+fcm: false
+integrations:
+omniauth_providers:
+- google-oauth2
+payment_processors:
+multitenancy:
+gems:
