@@ -1,0 +1,105 @@
+accept_all:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_123"
+  consent_given_at: <%= 1.day.ago %>
+  ip_address_hash: "hashed_ip_address_abc123"
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+  consent_choices:
+    necessary: true
+    preferences: true
+    statistics: true
+    marketing: true
+  consent_method: 0  # banner_accept_all
+  consent_version: 1
+
+reject_all:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_456"
+  consent_given_at: <%= 2.days.ago %>
+  ip_address_hash: "hashed_ip_address_def456"
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+  consent_choices:
+    necessary: true
+    preferences: false
+    statistics: false
+    marketing: false
+  consent_method: 1  # banner_reject_all
+  consent_version: 1
+
+customized:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_789"
+  consent_given_at: <%= 3.days.ago %>
+  ip_address_hash: "hashed_ip_address_ghi789"
+  user_agent: "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X)"
+  consent_choices:
+    necessary: true
+    preferences: true
+    statistics: true
+    marketing: false
+  consent_method: 2  # banner_customize
+  consent_version: 1
+
+withdrawn:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_withdrawn"
+  consent_given_at: <%= 10.days.ago %>
+  withdrawn_at: <%= 5.days.ago %>
+  ip_address_hash: "hashed_ip_address_jkl012"
+  user_agent: "Mozilla/5.0 (Linux; Android 10)"
+  consent_choices:
+    necessary: true
+    preferences: true
+    statistics: true
+    marketing: true
+  consent_method: 0  # banner_accept_all
+  consent_version: 1
+
+company_consent:
+  account: company
+  website: company_website
+  visitor_id: "visitor_hash_company_1"
+  consent_given_at: <%= 1.hour.ago %>
+  ip_address_hash: "hashed_ip_address_company_123"
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0)"
+  consent_choices:
+    necessary: true
+    preferences: true
+    statistics: false
+    marketing: false
+  consent_method: 2  # banner_customize
+  consent_version: 1
+
+old_consent:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_old"
+  consent_given_at: <%= 14.months.ago %>
+  ip_address_hash: "hashed_ip_address_old_789"
+  user_agent: "Mozilla/5.0 (X11; Linux x86_64)"
+  consent_choices:
+    necessary: true
+    preferences: false
+    statistics: false
+    marketing: false
+  consent_method: 1  # banner_reject_all
+  consent_version: 1
+
+recent:
+  account: one
+  website: one
+  visitor_id: "visitor_hash_recent"
+  consent_given_at: <%= 1.hour.ago %>
+  ip_address_hash: "hashed_ip_address_recent_456"
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+  consent_choices:
+    necessary: true
+    preferences: true
+    statistics: true
+    marketing: true
+  consent_method: 0  # banner_accept_all
+  consent_version: 2

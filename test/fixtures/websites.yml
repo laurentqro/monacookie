@@ -1,0 +1,44 @@
+one:
+  account: one
+  url: "https://example.com"
+  domain: "example.com"
+  verified: true
+  api_key: "test_api_key_one_123456789012345678901234567890"
+  last_scan_at: <%= 1.day.ago %>
+  next_scan_at: <%= 29.days.from_now %>
+
+two:
+  account: one
+  url: "https://acme.com"
+  domain: "acme.com"
+  verified: false
+  verification_token: "verify_token_123"
+  verification_method: "meta_tag"
+  api_key: "test_api_key_two_123456789012345678901234567890"
+
+company_website:
+  account: company
+  url: "https://company.com"
+  domain: "company.com"
+  verified: true
+  api_key: "test_api_key_company_12345678901234567890123456"
+  last_scan_at: <%= 7.days.ago %>
+  next_scan_at: <%= 23.days.from_now %>
+
+unverified:
+  account: two
+  url: "https://unverified.com"
+  domain: "unverified.com"
+  verified: false
+  verification_token: "verify_token_456"
+  verification_method: "dns_txt"
+  api_key: "test_api_key_unverified_123456789012345678901234"
+
+needs_scan:
+  account: one
+  url: "https://needsscan.com"
+  domain: "needsscan.com"
+  verified: true
+  api_key: "test_api_key_scan_1234567890123456789012345678"
+  last_scan_at: <%= 31.days.ago %>
+  next_scan_at: <%= 1.day.ago %>

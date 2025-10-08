@@ -1,0 +1,62 @@
+_fixture:
+  model_class: Cookie
+
+session_cookie:
+  website: one
+  name: "PHPSESSID"
+  domain: "example.com"
+  category: 0  # necessary
+  description: "PHP session identifier"
+  expiry: "session"
+  path: "/"
+  secure: true
+  http_only: true
+  active: true
+
+google_analytics:
+  website: one
+  name: "_ga"
+  domain: ".example.com"
+  category: 2  # statistics
+  description: "Google Analytics tracking cookie"
+  expiry: "2 years"
+  path: "/"
+  secure: true
+  http_only: false
+  active: true
+
+language_preference:
+  website: one
+  name: "lang"
+  domain: "example.com"
+  category: 1  # preferences
+  description: "User language preference"
+  expiry: "1 year"
+  path: "/"
+  secure: true
+  http_only: false
+  active: true
+
+facebook_pixel:
+  website: one
+  name: "_fbp"
+  domain: ".example.com"
+  category: 3  # marketing
+  description: "Facebook Pixel tracking cookie"
+  expiry: "90 days"
+  path: "/"
+  secure: true
+  http_only: false
+  active: true
+
+inactive_cookie:
+  website: two
+  name: "old_tracking"
+  domain: "acme.com"
+  category: 2  # statistics
+  description: "Inactive tracking cookie"
+  expiry: "1 year"
+  path: "/"
+  secure: true
+  http_only: false
+  active: false

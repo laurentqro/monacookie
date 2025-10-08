@@ -1,10 +1,11 @@
-devise_for :users,
-  controllers: {
-    omniauth_callbacks: ("users/omniauth_callbacks" if defined? OmniAuth),
-    passwords: "users/passwords",
-    registrations: "users/registrations",
-    sessions: "users/sessions"
-  }.compact
+devise_controllers = {
+  passwords: "users/passwords",
+  registrations: "users/registrations",
+  sessions: "users/sessions"
+}
+devise_controllers[:omniauth_callbacks] = "users/omniauth_callbacks" if defined?(OmniAuth)
+
+devise_for :users, controllers: devise_controllers
 
 devise_scope :user do
   get "session/otp", to: "sessions#otp"
